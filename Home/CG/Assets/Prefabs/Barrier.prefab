@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5787169267979020417}
   - component: {fileID: 5787169267979020416}
-  - component: {fileID: -4428245404323709198}
-  m_Layer: 0
+  - component: {fileID: -6615717312397433162}
+  - component: {fileID: 8598394549849133603}
+  - component: {fileID: 8442645412527636662}
+  m_Layer: 9
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +85,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4428245404323709198
+--- !u!114 &-6615717312397433162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787169267979020479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade826d7bae42fb4287a20bda4518368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!60 &8598394549849133603
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787169267979020479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40.019997, y: 19.521473}
+    newSize: {x: 40.019997, y: 19.521473}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 15.847762, y: -9.760736}
+      - {x: 17.020224, y: -9.760736}
+      - {x: 17.039764, y: -9.741196}
+      - {x: 17.039764, y: -8.314701}
+      - {x: 16.981142, y: -8.256079}
+      - {x: 20.009998, y: 3.292661}
+      - {x: 20.009998, y: 9.487163}
+      - {x: 19.755964, y: 9.760736}
+      - {x: -19.63872, y: 9.760736}
+      - {x: -20.009998, y: 9.428539}
+      - {x: -20.009998, y: 3.8398092}
+      - {x: -19.716883, y: 3.429448}
+      - {x: -16.414452, y: 3.4099069}
+      - {x: -16.609861, y: -9.760736}
+      - {x: -15.241991, y: -9.760736}
+      - {x: -15.456942, y: -6.9663715}
+      - {x: 2.794365, y: -6.8882074}
+      - {x: 3.8886619, y: -7.200864}
+    - - {x: -15.632812, y: -0.61554193}
+      - {x: 15.886845, y: -0.61554193}
+      - {x: 15.886845, y: -5.8720746}
+      - {x: -15.632812, y: -5.8720746}
+    - - {x: -15.496024, y: 3.3903658}
+      - {x: 16.004091, y: 3.3903658}
+      - {x: 16.004091, y: 0.32242674}
+      - {x: -15.496024, y: 0.32242674}
+--- !u!114 &8442645412527636662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188a44c38baa1d245bfd549d9d5fac3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankWaypoints: []
+  Waypoints: []
   obstacleWave: {fileID: 0}

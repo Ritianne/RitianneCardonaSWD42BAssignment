@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {     
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] float padding = 0.7f;
+    [SerializeField] float health = 5f;
 
     float xMin, xMax;
 
@@ -34,5 +35,30 @@ public class Player : MonoBehaviour
         Camera gameCamera = Camera.main;
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
+    }
+
+    // Reduces health when the player collides with an object
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DamageDealer dmgDealer = collision.gameObject.GetComponent<DamageDealer>();
+
+        // If there is no dmgDealer in otherObject, end the method
+        if (!dmgDealer) 
+        {
+            return;
+        }
+
+        ProcessHit(dmgDealer);
+    }
+
+    // Send DamageDealer details
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

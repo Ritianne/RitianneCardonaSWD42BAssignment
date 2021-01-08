@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript
   enemyPrefab: {fileID: 3798864253651036568, guid: 236f54a05ce8d3e4e9492bc72861a075, type: 3}
-  pathPrefab: {fileID: 3509736722970000932, guid: a74ec7bfc50bee74483d2dd496ae077b, type: 3}
+  pathPrefab: {fileID: 3960603951952010004, guid: a74ec7bfc50bee74483d2dd496ae077b, type: 3}
   timeBetweenSpawns: 0.5
   spawnRandomFactor: 0.3
   numberOfEnemies: 5

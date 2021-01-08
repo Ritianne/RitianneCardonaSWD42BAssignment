@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
-    [SerializeField] List<Transform> tankWaypoints;
+    [SerializeField] List<Transform> Waypoints;
     [SerializeField] ObstacleWave obstacleWave;
 
-    int tankWaypointIndex = 0;
+    int waypointIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the list from ObstacleWave
-        tankWaypoints = obstacleWave.GetWaypoints();
+        Waypoints = obstacleWave.GetWaypoints();
 
-        transform.position = tankWaypoints[tankWaypointIndex].transform.position;
+        transform.position = Waypoints[waypointIndex].transform.position;
     }
 
     // Update is called once per frame
@@ -26,17 +26,17 @@ public class EnemyPathing : MonoBehaviour
 
     private void EnemyMove()
     {
-        if (tankWaypointIndex <= tankWaypoints.Count - 1)
+        if (waypointIndex <= Waypoints.Count - 1)
         {
-            var targetPosition = tankWaypoints[tankWaypointIndex].transform.position;
+            var targetPosition = Waypoints[waypointIndex].transform.position;
             targetPosition.z = 0f;
 
-            var tankMovement =  obstacleWave.GetEnemyMoveSpeed() * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, tankMovement);
+            var movement = obstacleWave.GetEnemyMoveSpeed() * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, movement);
 
             if (transform.position == targetPosition)
             {
-                tankWaypointIndex++;
+                waypointIndex++;
             }
         }
 
