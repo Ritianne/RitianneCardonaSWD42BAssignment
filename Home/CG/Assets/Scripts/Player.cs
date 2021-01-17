@@ -80,5 +80,6 @@ public class Player : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
         // Destroy after 1 second
         Destroy(explosion, explosionDuration);
+        FindObjectOfType<Levels>().LoadGameOver();
     }
 }
