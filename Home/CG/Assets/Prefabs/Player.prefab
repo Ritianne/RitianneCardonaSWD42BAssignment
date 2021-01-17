@@ -99,6 +99,12 @@ MonoBehaviour:
   moveSpeed: 2
   padding: 0.7
   health: 5
+  points: 0
+  collisionSound: {fileID: 8300000, guid: 495bfb1883c0d264697a902b72aaf7f2, type: 3}
+  noCollisionSound: {fileID: 8300000, guid: 0cdc90c59c21ccf469edeb29a5421060, type: 3}
+  SoundVolume: 0.75
+  deathVFX: {fileID: 2742374663590200009, guid: 17407382c2dca1349a044cc29ac711cb, type: 3}
+  explosionDuration: 1
 --- !u!60 &6586052085054599000
 PolygonCollider2D:
   m_ObjectHideFlags: 0
