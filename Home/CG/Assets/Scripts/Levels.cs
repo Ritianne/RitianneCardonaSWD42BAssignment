@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Levels : MonoBehaviour
 {
     [SerializeField] float delaySeconds = 2f;
+    // Health health;    
 
     IEnumerator WaitAndLoad()
     {
@@ -22,11 +23,18 @@ public class Levels : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("CG");
+        // Reset GameSession
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void LoadGameOver()
     {
         StartCoroutine(WaitAndLoad());
+    }
+
+    public void LoadWinner()
+    {        
+        SceneManager.LoadScene("Winner");        
     }
 
     public void QuitGame()

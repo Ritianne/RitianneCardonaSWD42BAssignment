@@ -3,7 +3,9 @@ guid: 188a44c38baa1d245bfd549d9d5fac3d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - obstacleWave: {instanceID: 0}
+  - noCollisionSound: {fileID: 8300000, guid: 0cdc90c59c21ccf469edeb29a5421060, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

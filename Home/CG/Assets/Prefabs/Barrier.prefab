@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waypoints: []
   obstacleWave: {fileID: 0}
+  noCollisionSound: {fileID: 8300000, guid: 0cdc90c59c21ccf469edeb29a5421060, type: 3}
+  SoundVolume: 0.75
 --- !u!50 &-3141674039464037902
 Rigidbody2D:
   serializedVersion: 4

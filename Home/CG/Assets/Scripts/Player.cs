@@ -6,15 +6,15 @@ public class Player : MonoBehaviour
 {     
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] float padding = 0.7f;
-    [SerializeField] float health = 50f;
-    [SerializeField] int points = 0;
+    [SerializeField] int health = 50;
 
     [SerializeField] AudioClip collisionSound;
-    [SerializeField] AudioClip noCollisionSound;
     [SerializeField] [Range(0, 1)] float SoundVolume = 0.75f;
 
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
+
+    GameSession GameSession;
 
     float xMin, xMax;
 
@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
     {
         health -= dmgDealer.GetDamage();
         AudioSource.PlayClipAtPoint(collisionSound, Camera.main.transform.position, SoundVolume);
+        FindObjectOfType<Health>().UpdateHealth(health);
 
         if (health <= 0)
         {
@@ -81,5 +82,10 @@ public class Player : MonoBehaviour
         // Destroy after 1 second
         Destroy(explosion, explosionDuration);
         FindObjectOfType<Levels>().LoadGameOver();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }
