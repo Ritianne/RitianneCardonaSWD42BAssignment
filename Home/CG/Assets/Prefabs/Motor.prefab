@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waypoints: []
-  obstacleWave: {fileID: 0}
+  obstacleWave: {fileID: 11400000, guid: 4c7b5b0b627b7dc48b7c4ef23c201ceb, type: 2}
   noCollisionSound: {fileID: 8300000, guid: 0cdc90c59c21ccf469edeb29a5421060, type: 3}
   SoundVolume: 0.75
 --- !u!114 &8502648761825612349

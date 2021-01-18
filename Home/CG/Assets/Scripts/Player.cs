@@ -14,8 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
 
-    GameSession GameSession;
-
     float xMin, xMax;
 
     // Start is called before the first frame update

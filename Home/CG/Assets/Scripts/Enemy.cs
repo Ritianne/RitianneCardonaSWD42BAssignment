@@ -39,6 +39,6 @@ public class Enemy : MonoBehaviour
     {
         // Spawn laser at enemy position
         GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15f); 
+        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -15f); 
     }
 }

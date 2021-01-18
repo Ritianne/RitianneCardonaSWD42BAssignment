@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waypoints: []
-  obstacleWave: {fileID: 0}
+  obstacleWave: {fileID: 11400000, guid: 6ba3319b95ccc4b44b9dfa38bd612ce4, type: 2}
   noCollisionSound: {fileID: 8300000, guid: 0cdc90c59c21ccf469edeb29a5421060, type: 3}
   SoundVolume: 0.75
 --- !u!114 &-2046988129453860142
@@ -132,7 +132,6 @@ MonoBehaviour:
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   enemyLaserPrefab: {fileID: 7193094186232879011, guid: 23dea3da21a01e6489885f8a8e7c5a72, type: 3}
-  enemyLaserSpeed: 0.3
 --- !u!60 &-5332745264041564277
 PolygonCollider2D:
   m_ObjectHideFlags: 0

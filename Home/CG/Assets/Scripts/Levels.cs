@@ -5,13 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Levels : MonoBehaviour
 {
-    [SerializeField] float delaySeconds = 2f;
+    [SerializeField] float delaySeconds1 = 1f;
+    [SerializeField] float delaySeconds2 = 2f;
     // Health health;    
 
-    IEnumerator WaitAndLoad()
+    IEnumerator WaitAndLoadGameOver()
     {
-        yield return new WaitForSeconds(delaySeconds);
+        yield return new WaitForSeconds(delaySeconds2);
         SceneManager.LoadScene("GameOver");
+    }
+
+    IEnumerator WaitAndLoadWinner()
+    {
+        yield return new WaitForSeconds(delaySeconds1);
+        SceneManager.LoadScene("Winner");
     }
 
     public void LoadStartMenu()
@@ -23,18 +30,24 @@ public class Levels : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("CG");
+
+        if (!FindObjectOfType<GameSession>())
+        {
+            return;
+        }
+
         // Reset GameSession
         FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad());
+        StartCoroutine(WaitAndLoadGameOver());
     }
 
     public void LoadWinner()
-    {        
-        SceneManager.LoadScene("Winner");        
+    {
+        StartCoroutine(WaitAndLoadWinner());        
     }
 
     public void QuitGame()
