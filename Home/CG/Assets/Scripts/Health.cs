@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
 {
     // Update Text in UI
     Text healthText;
-    Player player;
     int health = 50;
 
     // Start is called before the first frame update

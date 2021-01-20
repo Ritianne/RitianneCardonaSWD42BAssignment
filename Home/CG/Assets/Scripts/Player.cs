@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         DamageDealer dmgDealer = collision.gameObject.GetComponent<DamageDealer>();
 
         // If there is no dmgDealer in otherObject, end the method
-        if (!dmgDealer) 
+        if (!dmgDealer)
         {
             return;
         }

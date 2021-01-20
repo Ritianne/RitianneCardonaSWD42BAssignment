@@ -7,7 +7,6 @@ public class Levels : MonoBehaviour
 {
     [SerializeField] float delaySeconds1 = 1f;
     [SerializeField] float delaySeconds2 = 2f;
-    // Health health;    
 
     IEnumerator WaitAndLoadGameOver()
     {
